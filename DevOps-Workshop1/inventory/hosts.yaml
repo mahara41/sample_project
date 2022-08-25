@@ -1,0 +1,13 @@
+all:
+  hosts:
+    mail.example.com:
+      ansible_connection: local
+  children:
+    webserver:
+      hosts:
+        foo.example.com:
+          ansible_connection: local
+    dbserver:
+      hosts:
+        bar.example.com:
+          ansible_connection: local
